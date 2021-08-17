@@ -6,40 +6,43 @@ const { fileContainsClass } = require("./helpers");
 const problemModulePath = "../classes/dragon.js";
 const Dragon = require(problemModulePath);
 
-describe("The Dragon class", () => {
+const filePath = path.resolve(__dirname, problemModulePath);
+const fileContainsClassResult = fileContainsClass(filePath, "Dragon");
+
+describe("Dragon class", () => {
   it("should not be null", () => {
     expect(Dragon).to.not.be.null;
   });
-
-  const filePath = path.resolve(__dirname, problemModulePath);
-  const fileContainsClassResult = fileContainsClass(filePath, "Dragon");
 
   it("should be a class", () => {
     expect(fileContainsClassResult).to.be.true;
   });
 
-  if (Dragon !== null && fileContainsClassResult) {
-    context("should include a constructor method that initializes", () => {
-      const instance = new Dragon("Puff", "green");
-
-      it("the `name` property from the provided argument value", () => {
-        expect(instance.name).to.equal("Puff");
-      });
-
-      it("the `color` property from the provided argument value", () => {
-        expect(instance.color).to.equal("green");
-      });
-    });
-  }
-});
-
-context("should include", () => {
-  it("an instance method named `breathesFire()`", () => {
+  it("has an instance method named `breathesFire()`", () => {
     expect(Dragon.prototype.breathesFire).to.not.be.undefined;
     expect(Dragon.prototype.breathesFire).to.be.an("Function");
   });
 
-  context("that", () => {
+  it("has a static method named `getDragons()`", () => {
+    expect(Dragon.getDragons).to.not.be.undefined;
+    expect(Dragon.getDragons).to.be.an("Function");
+  });
+
+  if (Dragon !== null && fileContainsClassResult) {
+    describe("constructor()", () => {
+      const instance = new Dragon("Puff", "green");
+
+      it("initializes the `name` property from the provided argument value", () => {
+        expect(instance.name).to.equal("Puff");
+      });
+
+      it("initializes the `color` property from the provided argument value", () => {
+        expect(instance.color).to.equal("green");
+      });
+    });
+  }
+
+  describe("breathesFire()", () => {
     it("returns the expected value", () => {
       const instance = new Dragon("Puff", "green");
       expect(instance.breathesFire()).to.equal(
@@ -47,14 +50,8 @@ context("should include", () => {
       );
     });
   });
-});
 
-context("should include", () => {
-  it("a static method named `getDragons()`", () => {
-    expect(Dragon.getDragons).to.not.be.undefined;
-    expect(Dragon.getDragons).to.be.an("Function");
-  });
-  context("that", () => {
+  describe("static getDragons()", () => {
     it("returns the expected value", () => {
       const instance2 = new Dragon("Puff", "green");
       const instance3 = new Dragon("Toothless", "black");
@@ -65,3 +62,5 @@ context("should include", () => {
     });
   });
 });
+
+
