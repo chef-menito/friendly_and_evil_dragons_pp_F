@@ -109,16 +109,15 @@ Implement the following in the __classes/friendly-dragon.js__ file.
 
 3. Export the `FriendlyDragon` class so that other modules can require it.
    **NOTE: IF YOU DO NOT CORRECTLY EXPORT THE `FriendlyDragon` CLASS, THE MOCHA
-   TESTS WILL THROW A 'TypeError` AND NOT RUN**
+   TESTS WILL THROW A `TypeError` AND NOT RUN**
 
 4. Additionally, add two(2) instance methods to the `FriendlyDragon` class.
-   a. A method named `hasLifeGoals` that will `console.log` each of the
-      `FriendlyDragon`'s life goals (stored in an array) as a separate
-      `console.log` for each life goal in the format
-      `${name} likes to ${lifeGoal}`
-   b. A second method named `helpsPeople` that will return a string using the
-      `name` and `friend` property values formatted as
-      `${name} helps their friend ${friend}`.
+    * `hasLifeGoals()` - this method should `console.log` each of the
+    `FriendlyDragon`'s life goals separately, in the format `${name} likes to
+    ${lifeGoal}`
+    * `helpsPeople()` - this method should return a string using the `name` and  
+      `friend` property values formatted as `${name} helps their friend
+      ${friend}`.
 
 In addition to Mocha, you should test your code manually using Node.js. After
 the `FriendlyDragon` class definition, you can insert the examples below and use
@@ -229,13 +228,12 @@ Implement the following in the __classes/evil-dragon.js__ file.
    TESTS WILL THROW A 'TypeError` AND NOT RUN**
 
 4. Additionally, add two(2) instance methods to the `EvilDragon` class.
-   a. A method named `dontInviteThemOverForDinner` that will `console.log` out
-      each of the Evil Dragon's evil doings (stored in an array) as a separate
-      `console.log` for each evil thing in the format
-      `${name} will ${evilDoing}`
-   b. A second method named `burnsNemesis` that will return a string using
-      `name` and `nemesis` property values formatted as
-      `${name} destroys ${nemesis} with fire! WHOOOSH!!!`.
+    * `dontInviteThemOverForDinner()` - this method should `console.log` out
+      each of the Evil Dragon's evil doings separately, in the format `${name}
+      will ${evilDoing}`
+    * `burnsNemesis()` - this method should return a string using `name` and
+      `nemesis` property values formatted as `${name} destroys ${nemesis} with
+      fire! WHOOOSH!!!`.
 
 In addition to Mocha, you should test your code manually using Node.js. After
 the `EvilDragon` class definition, you can insert the examples below and use
@@ -337,11 +335,11 @@ Implement the following in the __all-dragons.js__ file.
 
 3. Create 2 new instances, 1 of the `FriendlyDragon` Class and the other of the
    `EvilDragon` Class
-   a. A `FriendlyDragon` named "Falkor" with the color "white", the life goals
+    * A `FriendlyDragon` named "Falkor" with the color "white", the life goals
       of "save Atreyu from the swamp", "save Atreyu from the Nothing", and
       "scare the local bullies into a dumpster" and has the friend "Bastian".
       Assign this new instance to the variable `falkor`
-   b. An `EvilDragon` named "Smaug" with the color "black", the evilDoings of
+    * An `EvilDragon` named "Smaug" with the color "black", the evilDoings of
       "take over your mountain kingdom", "steal all your dwarven gold", and
       "burn down your floating village" and has the nemesis of "Dwarf King".
       Assign this new instance to the variable named "smaug"
