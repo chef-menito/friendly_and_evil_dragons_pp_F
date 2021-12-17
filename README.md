@@ -17,7 +17,7 @@ Your goal is to pass all the test specs in the __test/dragon-spec.js__ file.
 Run the Mocha test specs in that file with the following command:
 
 ```shell
-npm test test/dragon-spec.js 
+npm test test/dragon-spec.js
 ```
 
 Implement the following in the __classes/dragon.js__ file.
@@ -58,7 +58,7 @@ Puff breathes fire everywhere! BURN!!!!
 ```
 
 ```js
-const toothless = new Dragon("Toothless", "black"); 
+const toothless = new Dragon("Toothless", "black");
 console.log(toothless);
 console.log(toothless.breathesFire());
 ```
@@ -72,7 +72,7 @@ Toothless breathes fire everywhere! BURN!!!!
 
 ```js
 const puff = new Dragon("Puff", "green");
-const toothless = new Dragon("Toothless", "black"); 
+const toothless = new Dragon("Toothless", "black");
 console.log(Dragon.getDragons(puff, toothless));
 ```
 
@@ -90,7 +90,7 @@ Your goal is to pass all the test specs in the __test/friendly-dragon-spec.js__
 file. Run the Mocha test specs in that file with the following command:
 
 ```shell
-npm test test/friendly-dragon-spec.js 
+npm test test/friendly-dragon-spec.js
 ```
 
 Implement the following in the __classes/friendly-dragon.js__ file.
@@ -115,7 +115,7 @@ Implement the following in the __classes/friendly-dragon.js__ file.
     * `hasLifeGoals()` - this method should `console.log` each of the
     `FriendlyDragon`'s life goals separately, in the format `${name} likes to
     ${lifeGoal}`
-    * `helpsPeople()` - this method should return a string using the `name` and  
+    * `helpsPeople()` - this method should return a string using the `name` and
       `friend` property values formatted as `${name} helps their friend
       ${friend}`.
 
@@ -207,7 +207,7 @@ Your goal is to pass all the test specs in the __test/evil-dragon-spec.js__
 file. Run the Mocha test specs in that file with the following command:
 
 ```shell
-npm test test/evil-dragon-spec.js 
+npm test test/evil-dragon-spec.js
 ```
 
 Implement the following in the __classes/evil-dragon.js__ file.
@@ -322,7 +322,7 @@ Your goal is to pass all the test specs in the __test/all-dragons-spec.js__
 file. Run the Mocha test specs in that file with the following command:
 
 ```shell
-npm test test/all-dragons-spec.js 
+npm test test/all-dragons-spec.js
 ```
 
 Implement the following in the __all-dragons.js__ file.
@@ -345,8 +345,10 @@ Implement the following in the __all-dragons.js__ file.
       Assign this new instance to the variable named "smaug"
 
 4. Call the static `getDragons` method on the `Dragon` Class with your `falkor`
-   and `smaug` instances as arguments. Save this method call to a variable named
-   `allDragons` and add it to the `export` statement that already exists.
+   and `smaug` instances as arguments. Save this method call to a variable
+   named `allDragons` and add it to the `export` statement that already exists.
+   _Note, there is a comment that cautions not to edit the export statement; it
+   is __required__ to modify it for this step._
 
 In addition to Mocha, you should test your code manually using Node.js. After
 you implemented the steps above, you can insert the examples below and use
