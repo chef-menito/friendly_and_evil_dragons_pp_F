@@ -87,7 +87,7 @@ describe("The all-dragons.js module file", () => {
         expect(solution.smaug.name).to.equal(testSmaug.name);
       });
   
-      it("should have the `color` property be set to `White`", () => {
+      it("should have the `color` property be set to `Black`", () => {
         expect(solution.smaug.color).to.equal(testSmaug.color);
       });
   
